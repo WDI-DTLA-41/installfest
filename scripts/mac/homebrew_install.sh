@@ -36,6 +36,7 @@ inform "Installing the Homebrew package manager..." true
 
 # Set up permissions for /usr/local to anyone in admin group!
 echo "Setting permissions of the Homebrew directory..."
+echo "🕑 This may take awhile!"
 grant_current_user_permissions /usr/local
 allow_group_by_acls admin /usr/local
 show "Complete!"

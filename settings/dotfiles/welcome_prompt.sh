@@ -17,8 +17,10 @@ welcome_msg() {
     echo $(brew -v)
   fi
   echo $(ruby -v)
+  echo "nvm $(nvm --version)"
   echo "node $(node --version)"
   echo $(psql --version)
+  echo $(mongo --version)
   # echo $(heroku --version)
   # TODO (PJ) add tests for MongoDB, that there is a PG db for the current user
   echo "------------------------------------------"

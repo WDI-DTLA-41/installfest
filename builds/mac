@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-COMPILED_AT='Mon Sep 26 14:44:46 PDT 2016'
+COMPILED_AT='Sun Nov 27 20:07:12 PST 2016'
 #
 #  _           _        _ _  __           _
 # (_)_ __  ___| |_ __ _| | |/ _| ___  ___| |_
@@ -349,14 +349,15 @@ fi
 #-------------------------------------------------------------------------------
 
 # Ensure user has full control over their folder
-inform "Ensuring the current user owns their home folder." true
+inform "🏠 Ensuring the current user owns their home folder." true
+inform "🕑 This may take awhile!" true
 sudo chown -R ${USER} ~
 show "Complete!"
 
 # Run repair disk permissions if prior to 10.11 (El Capitan)
 if [ "$OS_NUMBER" -lt "11" ]; then
   inform "Running repair permissions..." true
-  inform "  Note: this may take a VERY LONG TIME!"
+  inform "🕑 Note: this may take a VERY LONG TIME!"
   diskutil repairPermissions /
   show "Complete!"
 else
@@ -503,6 +504,7 @@ inform "Installing the Homebrew package manager..." true
 
 # Set up permissions for /usr/local to anyone in admin group!
 echo "Setting permissions of the Homebrew directory..."
+echo "🕑 This may take awhile!"
 grant_current_user_permissions /usr/local
 allow_group_by_acls admin /usr/local
 show "Complete!"
@@ -853,7 +855,7 @@ show "Complete!"
 #-------------------------------------------------------------------------------
 
 inform "Installing correct Ruby version and optimizing for your system..." true
-inform "  Note: this may take a VERY LONG TIME!"
+inform "🕑 Note: this may take a VERY LONG TIME!"
 
 ruby_check=$(rbenv versions | grep $BELOVED_RUBY_VERSION)
 

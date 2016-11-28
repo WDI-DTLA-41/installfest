@@ -3,7 +3,7 @@
 #-------------------------------------------------------------------------------
 
 inform "Installing correct Ruby version and optimizing for your system..." true
-inform "  Note: this may take a VERY LONG TIME!"
+inform "🕑 Note: this may take a VERY LONG TIME!"
 
 ruby_check=$(rbenv versions | grep $BELOVED_RUBY_VERSION)
 

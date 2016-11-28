@@ -34,7 +34,7 @@ have multiple users, let the instructors know!
 Paste this script into a Terminal prompt:
 
 ```
-bash <(curl -sL https://raw.githubusercontent.com/GA-WDI/installfest/master/builds/mac)
+bash <(curl -sL https://raw.githubusercontent.com/WDI-DTLA-41/installfest/master/builds/mac)
 ```
 
 ##### ~~For Ubuntu Linux~~

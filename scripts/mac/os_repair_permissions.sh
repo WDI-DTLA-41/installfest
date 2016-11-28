@@ -3,14 +3,15 @@
 #-------------------------------------------------------------------------------
 
 # Ensure user has full control over their folder
-inform "Ensuring the current user owns their home folder." true
+inform "🏠 Ensuring the current user owns their home folder." true
+inform "🕑 This may take awhile!" true
 sudo chown -R ${USER} ~
 show "Complete!"
 
 # Run repair disk permissions if prior to 10.11 (El Capitan)
 if [ "$OS_NUMBER" -lt "11" ]; then
   inform "Running repair permissions..." true
-  inform "  Note: this may take a VERY LONG TIME!"
+  inform "🕑 Note: this may take a VERY LONG TIME!"
   diskutil repairPermissions /
   show "Complete!"
 else
